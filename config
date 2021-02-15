@@ -1,0 +1,33 @@
+# Host *
+#      PermitLocalCommand yes
+#      LocalCommand bash -c 'scp -C -P  %p %d/ .ssh/.bashrc %r@%n: &>/dev/null'
+# -C to enable compression
+# -P to set port parameter, %p to pass the configured port
+# %d local user home dir
+# %r remote user name
+# %n remote hostname
+# ssh -L puertolocal:ipdesalto:puertoremoto user@destino
+
+
+# Llamado a configuraciones externas
+Match host casa-*
+    Include config.d/casa.conf
+
+Match host edu-*
+    Include config.d/edu.conf
+
+Match host rh-*
+    Include config.d/rh.conf
+
+Match host thecloud-*
+    Include config.d/rh.conf
+
+# Configuración de identidades de github
+Host github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+Host github.com-rh
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_rh
