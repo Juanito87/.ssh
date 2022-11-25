@@ -13,21 +13,5 @@
 Match host casa-*
     Include config.d/casa.conf
 
-Match host edu-*
+Match host *.azure.com
     Include config.d/edu.conf
-
-Match host rh-*
-    Include config.d/rh.conf
-
-Match host thecloud-*
-    Include config.d/rh.conf
-
-# Configuración de identidades de github
-Host github.com
-User git
-IdentityFile ~/.ssh/id_rsa
-
-Host github.com-rh
-HostName github.com
-User git
-IdentityFile ~/.ssh/id_rsa_rh
