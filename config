@@ -15,3 +15,8 @@ Match host casa-*
 
 Match host *.azure.com
     Include config.d/edu.conf
+
+Host github.com-debug
+      HostName github.com
+      User git
+      IdentityFile ~/.ssh/juanito-debug
