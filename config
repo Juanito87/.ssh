@@ -20,3 +20,6 @@ Host github.com-debug
       HostName github.com
       User git
       IdentityFile ~/.ssh/juanito-debug
+
+Host *.rpcpool.wg
+  IdentityFile ~/.ssh/vault-identity.pub
